@@ -1,7 +1,7 @@
 # <h1 align="center">Laporan Praktikum Modul 3 </h1>
 <p align="center">Alifia Raihan Nugraheni - 109082500129</p>
 
-## Unguided 
+## Faktorial dan Kombinasi 
 
 ### 1. Minggu ini, mahasiswa Fakultas Informatika mendapatkan tugas dari mata kuliah matematika diskrit untuk mempelajari kombinasi dan permutasi. Jonas salah seorang mahasiswa, iseng untuk mengimplementasikannya ke dalam suatu program. Oleh karena itu bersediakah kalian membantu Jonas?
 
@@ -38,7 +38,7 @@ func main () {
 }	
 
 ```
-### Output Unguided :
+
 
 ##### Output 
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/ouput-soal1.jpg)
@@ -55,7 +55,7 @@ func main, menjelaskan:
 untuk println pertama untuk output permutilasi dan kombinasi dari inputan a dan c, dan
 untuk println kedua untuk output permutilasi dan kombinasi dari inputan b dan d.
 
-## Unguided
+## Fungsi
 
 ### 2. Diberikan tiga buah fungsi matematika yaitu f (x) = x^2, g (x) = x − 2 dan h (x) = x + 1. Fungsi komposisi (fogoh)(x) artinya adalah f(g(h(x))). Tuliskan f(x), g(x) dan h(x) dalam bentuk function. Baris pertama adalah (fogoh)(a), baris kedua (gohof)(b), dan baris ketiga adalah (hofog)(c)!
 
@@ -89,7 +89,7 @@ func main () {
 }
 
 ```
-### Output Unguided :
+
 
 ##### Output 
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/output-soal2.jpg)
@@ -106,7 +106,7 @@ untuk println pertama untuk mencari (fogoh)(a),
 untuk println kedua untuk mencari (gohof)(b), dan
 untuk println ketiga untuk mencari(hofog)(c).
 
-## Unguided
+## Lingkaran
 
 ### 3. Suatu lingkaran didefinisikan dengan koordinat titik pusat (cx, cy) dengan radius r. Apabila diberikan dua buah lingkaran, maka tentukan posisi sebuah titik sembarang (x, y) berdasarkan dua lingkaran tersebut.
 
@@ -152,7 +152,7 @@ func main () {
 }
 
 ```
-### Output Unguided :
+
 
 ##### Output 
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/output-soal3.jpg)
