@@ -41,9 +41,9 @@ func main () {
 
 
 ##### Output 
-![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/ouput-soal1.jpg)
+(https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/ouput-soal1.jpg)
 
-[penjelasan]
+##### Penjelasan
 
 codingan diatas untuk mencari permutasi dan kombinasi, dengan:
 
@@ -92,9 +92,9 @@ func main () {
 
 
 ##### Output 
-![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/output-soal2.jpg)
+(https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/output-soal2.jpg)
 
-[penjelasan]
+##### Penjelasan
 
 codingan diatas mencari fungsi komposisi (fogoh)(a), baris kedua (gohof)(b), dan baris ketiga adalah (hofog)(c), dengan:
 a, b, dan c adalah angka yang diinput.
@@ -155,9 +155,9 @@ func main () {
 
 
 ##### Output 
-![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/output-soal3.jpg)
+(https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/output-soal3.jpg)
 
-[penjelasan]
+##### Penjelasan
 
 codingan diatas untuk mencari posisi titik lingkaran, dengan:
 
