@@ -41,7 +41,7 @@ func main () {
 
 
 ##### Output 
-(https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/ouput-soal1.jpg)
+![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/ouput-soal1.jpg)
 
 ##### Penjelasan
 
@@ -92,7 +92,7 @@ func main () {
 
 
 ##### Output 
-(https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/output-soal2.jpg)
+![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/output-soal2.jpg)
 
 ##### Penjelasan
 
@@ -155,7 +155,7 @@ func main () {
 
 
 ##### Output 
-(https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/output-soal3.jpg)
+![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul3/output/output-soal3.jpg)
 
 ##### Penjelasan
 
