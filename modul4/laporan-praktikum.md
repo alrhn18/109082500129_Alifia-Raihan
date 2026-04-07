@@ -117,7 +117,7 @@ func main() {
 ### Output Unguided :
 
 ##### Output 
-![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul4/output/output-soal2.jpg)
+![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul4/output/output-soal2.jpeg)
 
 ##### Penjelasan
 code diatas untuk mencari pemenang kompetisi pemrograman, dari jumlah soal yang bisa dikerjakan dan lama waktu mengerjakan soal.
