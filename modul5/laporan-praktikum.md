@@ -118,7 +118,7 @@ func main () {
 ### Output Unguided :
 
 ##### Output 
-![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul5/output/output-soal2.jpeg)
+![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul5/output/output-soal3.png)
 
 ##### Penjelasan
 code diatas untuk mencari faktor dari n.
