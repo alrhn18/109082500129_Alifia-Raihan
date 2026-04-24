@@ -109,6 +109,7 @@ func main () {
 		fmt.Scan(&arr[i])
 	}
 
+	// semua elemen
 	fmt.Println("semua:", arr)
 
 	// elemen yang keluar jika index ganjil 
