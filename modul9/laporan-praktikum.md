@@ -55,11 +55,31 @@ func main() {
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal1.jpg)
 
 ##### Penjelasan
-code diatas untuk membuat deret fibonacci. 
+codingan diatas untuk mencari posisi titik lingkaran, dengan:
 
-func fibonacci adalah fungsi rekrusif untuk menghitung nilai fibonacci dari ke n. kalo n <= 1 maka akan kembali ke n. jika n > 1 maka akan menggunakan rumus fibonacci(n) = fibonacci(n-1) + fibonacci(n-2).
+cx, cy adalah titik tengah lingkaran,
+x, y adalah titik yang akan di cek, dan
+r adalah jarak maksimal dari pusat
 
-di func main untuk menginput angka yang mau dibuat jadi deret fibonacci. menggunkan perulangan "for". setiap perulangan akan menghitung fibonaci ke i. hasil dari fibonacci akan di simpan di "hasil". deretan fibonacci akan ditampilkan.
+func jarak untuk mencari jarak antara titik tengah (cx, cy) dan titik (x,y).
+
+
+func dalam untuk mencari kebenaran dari jarak yang sudak di cari di func jarak dengan jarak maksimal.
+
+jika d <= r maka titik tersebut berada di dalam lingkaran,
+jika d > r maka titik tersebut berada di luar lingkaran.
+
+
+pada bagian func main menjelaskan:
+
+dlm1 untuk mengitung jarak antara titik pusat(cx1, cy1) dan titik(x, y), dan menjelaskan kebenaran antara jarak yang sudah dihitung dengan jarak maksimal(r1)
+dlm2 untuk menghitung jarak antara titik pusat(cx2, cy2) dan titik(x, y), dan menjelaskan kebenaran antara jarak yang sudah dihitung dengan jarak maksimal(r2)
+
+pada baris ke 120-121 itu menjelaskan kebenarannya, antara TRUE atau FALSE, maka outputnya:
+jika TRUE dan TRUE maka outputnya "titik dalam lingkaran 1 dan 2",
+jika yang TRUE hanya di "dlm1" maka outputnya "titik di dalam lingkaran 1",
+jika yang TRUE hanya di "dlm2" maka outputnya "titik di dalam lingkaran 2", dan
+jika FALSE semua maka outputnya "titik di luar lingkaran 1 dan 2".
 
 
 ## Array
@@ -82,13 +102,13 @@ func main () {
 	fmt.Print("n: ")
 	fmt.Scan(&n)
 
+    // membuat array
 	arr := make ([]int, n)
 	for i:= 0; i <= n-1; i++{
 		fmt.Printf("arr[%d]: ", i)
 		fmt.Scan(&arr[i])
 	}
 
-	// semua elemen
 	fmt.Println("semua:", arr)
 
 	// elemen yang keluar jika index ganjil 
@@ -161,11 +181,9 @@ func main () {
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal2.jpg)
 
 ##### Penjelasan
-code diatas untuk menampilkan pola bintang. 
+code diatas untuk menampilkan keseluruhan isi array, elemen elemen array dengan indeks ganjil dan genap, elemen elemen array dengan kelipatan bilangan x, menghapus elemen array pada indeks tertentu, rata rata dari bilangan dalam array, simpangan baku yang ada di dalam array, dan frekuensi dari suatu bilangan. 
 
-func bintang merupakan fungsi rekrusif untuk mencetak jumlah bintang sesuai banyaknya yang diinput. jika n == 0 maka program akan berhenti. tetapi jika n > 0 akan mencetak bintang (*) lalu memanggil fungsi bintang(n-1)
-
-func main untuk menginput a, yang merupakan jumlah baris pola. terjadi perulangan dari 1 sampai a, pada iterasi fungsi bintang(i) akan dipanggil lagi untuk untuk mencetak i bintang. fmt.Println() untuk pindah ke baris yang baru.
+pada baris 105, akan membuat array sebanyak n, dan akan mengisi elemen satu satu. pada baris 115 sampai 130, akan membuat putput elemen dari index ganjil dan genap, dengan cara di modulo 2. pada baris 132, akan membuat index kelipatan x. pada baris 143, akan memnghapus elemen dari index tertentu. pada baris 150, akan mencari rata rata dari elemen tersebut, dengan cara menambahkan semua elemen lalu dibagi banyaknya elemen, lalu diubah ke dalam float64 agar hasilnya desimal. pada baris 158, untuk mencari simpangan baku. pada baris 166, akan mencari frekuensi yang muncul di array, dengan cara loop seluruh array dan menghitung berapa kali nilai yang diinput muncul.
 
 
 ## Pertandingan Bola
@@ -224,11 +242,9 @@ func main () {
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal3.jpg)
 
 ##### Penjelasan
-code diatas untuk mencari faktor dari n.
+code diatas untuk mencari pemenang dalam pertandingan bola antara MU dan Inter.
 
-func faktor untuk mencari dan menampilkan faktor faktor dari bilangan a. jika pembagi > a maka akan berhenti. jika a % pembagi == 0 maka pembagi merupakan faktor dari a, maka akan ditampilkan. lalu memanggil fungsi pembagi + 1 untuk mengecek pembagi berikutnya.
-
-func main akan menginput bilangan n yang akan dicari faktornya. lalu memanggil fungsi faktor(n, 1), yang artinya n adalah a dan pembagi adalah 1. lalu program akan mencari faktor dari 1 hingga n.
+pada baris 206-210 untuk menginput nama klub bola. pada baris 212-229 untuk menginput skor pertandingan, dan menentukan siapa pemenang dari setiap pertandingan, dan memberi output skor per-pertandingan. pada baris 231-237 untuk memberi output siapa pemenang dari per-pertandingan.
 
 
 ## Palindrom
@@ -313,8 +329,6 @@ func main () {
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal4.jpg)
 
 ##### Penjelasan
-code diatas untuk mencari faktor dari n.
+code diatas untuk mencari palindrom dan output dari kebalikan kalimat yang kita input
 
-func faktor untuk mencari dan menampilkan faktor faktor dari bilangan a. jika pembagi > a maka akan berhenti. jika a % pembagi == 0 maka pembagi merupakan faktor dari a, maka akan ditampilkan. lalu memanggil fungsi pembagi + 1 untuk mengecek pembagi berikutnya.
-
-func main akan menginput bilangan n yang akan dicari faktornya. lalu memanggil fungsi faktor(n, 1), yang artinya n adalah a dan pembagi adalah 1. lalu program akan mencari faktor dari 1 hingga n.
+pada func isi_array untuk membaca inputan kalimat. pada func cetak_array untuk mencetak setiap karater dalam array. pada func balikan_array untuk memberi output kebalikan kalimat yang diinput diawal. pada func palindrom untuk mengecek apakah kalimat yang diinput merupakan palindrom atau tidak. pada func main untuk pengecekan palindrom sebelum array dibalik, dan untuk menginput kalimat, dan memberi output dari kalimat yang sudah dibalik, dan true atau false nya palindrom.

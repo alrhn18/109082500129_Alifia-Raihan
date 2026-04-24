@@ -11,6 +11,7 @@ func main () {
 	fmt.Print("n: ")
 	fmt.Scan(&n)
 
+	// membuat array
 	arr := make ([]int, n)
 	for i:= 0; i <= n-1; i++{
 		fmt.Printf("arr[%d]: ", i)
