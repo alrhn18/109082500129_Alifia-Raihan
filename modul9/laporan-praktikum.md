@@ -52,7 +52,7 @@ func main() {
 ### Output Unguided :
 
 ##### Output 
-![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal1.jpeg)
+![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal1.jpg)
 
 ##### Penjelasan
 code diatas untuk membuat deret fibonacci. 
@@ -158,7 +158,7 @@ func main () {
 ### Output Unguided :
 
 ##### Output 
-![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal2.jpeg)
+![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal2.jpg)
 
 ##### Penjelasan
 code diatas untuk menampilkan pola bintang. 
@@ -221,7 +221,7 @@ func main () {
 ### Output Unguided :
 
 ##### Output 
-![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal3.png)
+![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal3.jpg)
 
 ##### Penjelasan
 code diatas untuk mencari faktor dari n.
@@ -310,7 +310,7 @@ func main () {
 ### Output Unguided :
 
 ##### Output 
-![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal4.png)
+![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul9/output/output-soal4.jpg)
 
 ##### Penjelasan
 code diatas untuk mencari faktor dari n.
