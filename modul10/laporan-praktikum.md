@@ -114,7 +114,7 @@ func main () {
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul10/output/output-soal2.jpg)
 
 ##### Penjelasan
-code diatas untuk menampilkan pola bintang. 
+code diatas untuk . 
 
 -belum-
 
