@@ -78,7 +78,7 @@ code diatas untuk mencari berat kelinci terkecil dan terbesar menggunakan array.
 func brt_1 untuk mencari berat kelinci terkecil, func brt_2 untuk mencari berat kelinci terbesar. pada func main akan menginput banyak kelinci, dan berat kelinci. lalu di func main juga akan memberi output berat kelinci terkecil dan terbesar.
 
 
-## (belum di kerjakan -soal lele-)
+## Total Berat Ikan dan Rata Rata berat Ikan per Wadah
 
 ### 2. Sebuah program digunakan untuk menentukan tarif ikan yang akan dijual ke pasar. Program ini menggunakan array dengan kapasitas 1000 untuk menampung data berat ikan yang akan dijual. Masukan terdiri dari dua baris, yang mana baris pertama terdiri dari dua bilangan bulat x dan y. Bilangan x menyatakan banyaknya ikan yang akan dijual, sedangkan y adalah banyaknya ikan yang akan dimasukan ke dalam wadah. Baris kedua terdiri dari sejumlah x bilangan riil yang menyatakan banyaknya ikan yang akan dijual. Keluaran terdiri dari dua baris. Baris pertama adalah kumpulan bilangan riil yang menyatakan total berat ikan di setiap wadah (jumlah wadah tergantung pada nilai x dan y, urutan ikan yang dimasukan ke dalam wadah sesuai urutan pada masukan baris ke-2). Baris kedua adalah sebuah bilangan riil yang menyatakan berat rata-rata ikan di setiap wadah.
 
@@ -89,24 +89,73 @@ package main
 
 import "fmt"
 
-func bintang(n int){
-	if n == 0{
-		return
+type lele struct{
+	berat float64
+	nomor int
+}
+
+type arrlele [1000]lele
+
+func hitung_wadah(data arrlele, x, y int){
+	jumlah_wadah := x / y
+	
+	if x % y != 0{
+		jumlah_wadah++
 	}
 
-	fmt.Print("*")
-	bintang(n-1)
+	// total
+	var total[1000]float64
+	var wadah int
+
+	j := 0
+	for j < x{
+		wadah = j / y
+		total[wadah] += data[j].berat
+		j++
+	}
+
+	i := 0
+	for i < jumlah_wadah{
+		if i > 0{
+			fmt.Print(" ")
+		}
+		fmt.Printf("%.2f", total[i])
+		i++
+	}
+	fmt.Println()
+
+	// rata-rata
+	total_semua := 0.0
+	k := 0
+
+	for k < jumlah_wadah{
+		total_semua += total[k]
+		k++
+	}
+
+	rata_rata := total_semua / float64(jumlah_wadah)
+	fmt.Printf("%.2f", rata_rata)
 }
 
 func main () {
-	var a int
+	var data arrlele
+	var x, y int
 
-	fmt.Scan(&a)
-	for i := 1; i <= a; i++{
-		bintang(i)
-		fmt.Println()
+	fmt.Print("banyak ikan dan isi wadah: ")
+	fmt.Scan(&x, &y)
+
+	i := 0
+	for i <x{
+		data[i].nomor = i +1
+		fmt.Printf("berat ikan ke-%d: ", data[i].nomor)
+		fmt.Scan(&data[i].berat)
+		i++
 	}
+
+	hitung_wadah(data, x, y)
 }
+
+
 ```
 ### Output Unguided :
 
@@ -114,9 +163,13 @@ func main () {
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul10/output/output-soal2.jpg)
 
 ##### Penjelasan
-code diatas untuk . 
+code diatas untuk mencari berat total ikan perwadah dan rata rata berat ikan per wadah
 
--belum-
+type lele untuk menyimpan data lele, yaitu nomor dan beratnya. Type array untuk menampung hingga 1000 data ikan. 
+
+Di dalam func hitung_wadah untuk mencari total ikan perwadah dan rata rata ikan perwadah. Di awal hitung jumlah wadah nya terlebih dahulu, dengan cara membagi jumlah ikan dengan kapasitas wadah. Lalu akumulasi berat per wadah, dengan cara ikan ke-j masuk ke wadah j/y. Lalu mencetak total perwadah dan rata rata.
+
+Di func main untuk menginput angka dan berat ikan, dan memanggil func hitung_wadah
 
 
 ## Mencari Min, Max, dan Rata Rata Berat Badan Balita
