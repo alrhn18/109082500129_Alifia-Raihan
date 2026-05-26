@@ -67,7 +67,11 @@ func main () {
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul14/output/output-soal1.jpg)
 
 ##### Penjelasan
-[penjelasan]
+Kode tersebut untuk mengurutkan nomor rumah dari kecil ke terbesar menggunakan cara sorting. Dengan n adalah banyak daerah kerabat Hercules tinggal dan m adalah banyaknya rumah kerabat di daerah tersebut.
+
+Func rumahkerabat untuk mengurutkan dari nomor terkecil ke nomor terbesar. Bekerja dengan cara mencari nilai terkecil(idx_min) pada data, lalu menukarnya dengan elemen paling kiri menggunakan variabel sementara a.
+
+Pada func main nantinya program akan membaca n daerah. Untuk setiap daerah, dibaca m nomor rumah ke dalam array, kemudian akan memanggil func rumahkerabat dan hasilnya akan dicetak perbaris.
 
 
 ## Mengurutkan Nomor Rumah dari Ganjil (Kecil ke Besar) dilanjut ke Genap (kecil ke besar)
@@ -191,7 +195,13 @@ func main () {
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul14/output/output-soal2.jpg)
 
 ##### Penjelasan
-[penjelasan]
+Kode tersebut untuk mengurutkan nomor rumah dari nomor ganjil (dari nomor terkecil ke nomor besar) ke nomor genap (dari nomor terkecil ke nomor terbesar). Dimana nantinya akan dibedakan func nya untuk menghitung ganjil dan genap.
+
+Func rumahkerabat_ganjil untuk mengurutkan nomor ganjil dari terkecil ke terbesar dengan menggunakan cara sorting. Bekerja dengan cara mencari nilai terkecil (idx_min) lalu menukarnya ke posisi kiri.
+
+Func rumahkerabat_genap untuk mengurutkan nomor genap dari terkecil ke terbesar dengan menggunakan cara sorting. Bekerja dengan mencari idx_min sebagai nilai terbesar, lalu menukarnya ke posisi kanan.
+
+Func main setelah menginnput angka, nantinya angka tersebut langsung dipisahkan ke array ganjil atau genap. Lalu kedua array akan digabung ke array gabung dengan hasil sorting ganjil didepan dan hasil sorting genap dibelakang, lalu dicetak dalam satu baris.
 
 
 ## Mencari Median yang Diminta, Satu Data per Baris
@@ -252,4 +262,10 @@ func main () {
 ![Screenshot Output Unguided 1_1](https://github.com/alrhn18/109082500129_Alifia-Raihan/blob/main/modul14/output/output-soal3.jpg)
 
 ##### Penjelasan
-[penjelasan]
+Kode tersebut untuk mencari nilai median dari kumpulan data yang sudah terbaca.
+
+Func median untuk mengurutkan nilai yang diinput dari yang terkecil ke terbesar dengan cara sorting. Bekerja dengan cara mengambil satu elemen a, lalu menggeser elemen elemen sebelumya yang lebih besar ke kanan hingga menjadi terurut dari terkecil ke terbesar.
+
+Func main untuk membaca angka yang diinput. Bilangan selain 0 dan -5313 akan disimpan ke array skor. Saat program membaca 0, func median akan dipanggil lalu akan menghitung median. Jika jumlah data ganjil, maka akan diampil elemen yang ditengah, jika jumlah data genap, maka diambil rata rata dua elemen tengah yang dibulatkan kebawah.
+
+Progran ini akan berhenti ketika program membaca -5313
