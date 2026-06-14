@@ -272,10 +272,8 @@ Program ini akan berhenti ketika program membaca -5313
 
 
 
-
-
-
 # <h1 align="center">Laporan Praktikum Modul 14 (Insertion Sort) </h1>
+<p align="center"> Alifia Raihan Nugraheni - 109082500129 </p>
 
 ## Mengurutkan Angka dari Kecil ke Besar dan Mencari Jarak Antara Angka
 
