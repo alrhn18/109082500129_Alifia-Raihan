@@ -1,102 +1,107 @@
-package main
+package main 
 
 import "fmt"
 
-const nMax = 7919
+type arrKerabat [1000000]int
 
-type Buku struct {
-	id        string
-	judul     string
-	penulis   string
-	penerbit  string
-	eksemplar int
-	tahun     int
-	rating    int
-}
+//untuk menghitung ganjil
+func rumahkerabat_ganjil(T *arrKerabat, n int){
+	var a, i, j, idx_min int
 
-type DaftarBuku [nMax]Buku
-
-var pustaka DaftarBuku
-var nPustaka int
-
-func daftarkanBuku() {
-	fmt.Scan(&nPustaka)
-	for i := 0; i < nPustaka; i++ {
-		fmt.Scan(&pustaka[i].id)
-		fmt.Scan(&pustaka[i].judul)
-		fmt.Scan(&pustaka[i].penulis)
-		fmt.Scan(&pustaka[i].penerbit)
-		fmt.Scan(&pustaka[i].eksemplar)
-		fmt.Scan(&pustaka[i].tahun)
-		fmt.Scan(&pustaka[i].rating)
-	}
-}
-
-func cetakTerfavorit(p DaftarBuku, n int) {
-	if n == 0 {
-		return
-	}
-	idx := 0
-	for i := 1; i < n; i++ {
-		if p[i].rating > p[idx].rating {
-			idx = i
+	i = 1
+	for i <= n -1{
+		idx_min = i -1
+		j = i 
+		for j < n{
+			if T[idx_min] > T[j]{
+				idx_min = j
+			}
+			j = j + 1
 		}
+		a = T[idx_min]
+		T[idx_min] = T[i-1]
+		T[i-1] = a
+		i = i + 1
 	}
-	fmt.Println(p[idx].judul, p[idx].penulis, p[idx].penerbit, p[idx].tahun)
 }
 
-func urutBuku(p *DaftarBuku, n int) {
-	for i := 1; i < n; i++ {
-		key := p[i]
-		j := i - 1
-		for j >= 0 && p[j].rating < key.rating {
-			p[j+1] = p[j]
-			j--
+//untuk menghitung genap
+func rumahkerabat_genap(T *arrKerabat, n int){
+	var a, i, j, idx_min int
+
+	i = 1
+	for i <= n -1{
+		idx_min = i -1
+		j = i 
+		for j < n{
+			if T[idx_min] < T[j]{
+				idx_min = j
+			}
+			j = j + 1
 		}
-		p[j+1] = key
+		a = T[idx_min]
+		T[idx_min] = T[i-1]
+		T[i-1] = a
+		i = i + 1
 	}
 }
 
-func cetak5Terbaru(p DaftarBuku, n int) {
-	limit := 5
-	if n < 5 {
-		limit = n
-	}
-	for i := 0; i < limit; i++ {
-		fmt.Println(p[i].judul)
-	}
-}
+func main () {
+	var n, m, x int
+	var genap, ganjil, gabung arrKerabat
 
-func cariBuku(p DaftarBuku, n int, r int) {
-	kn, kr := 0, n-1
-	hasil := -1
-	for kn <= kr && hasil == -1 {
-		tgh := (kn + kr) / 2
-		if p[tgh].rating == r {
-			hasil = tgh
-		} else if p[tgh].rating < r {
-			kr = tgh - 1
-		} else {
-			kn = tgh + 1
+	fmt.Scan(&n)
+
+	d := 1
+	for d <= n{
+		fmt.Scan(&m)
+		gj := 0 //ganjil
+		gn := 0 //genap
+
+		k := 0
+		for k < m{
+			fmt.Scan(&x)
+			if x % 2 != 0{
+				ganjil[gj] = x
+				gj = gj + 1
+			}else if x % 2 == 0{
+				genap[gn] = x
+				gn = gn + 1
+			}
+			k++
 		}
-	}
-	if hasil == -1 {
-		fmt.Println("Tidak ada buku dengan rating seperti itu")
-	} else {
-		fmt.Println(p[hasil].judul, p[hasil].penulis, p[hasil].penerbit, p[hasil].tahun, p[hasil].eksemplar, p[hasil].rating)
-	}
-}
+		
+		//urutin dulu dari ganjil (kecil ke besar) lanjut ke genap (kecil ke besar)
+		if gj > 0{
+			rumahkerabat_ganjil(&ganjil, gj)
+		}
 
-func main() {
-	var r int
-	daftarkanBuku()
+		if gn > 0{
+			rumahkerabat_genap(&genap, gn)
+		}
 
-	cetakTerfavorit(pustaka, nPustaka)
+		//untuk gabungin ganjil dan genap, untuk di cetak
+		k = 0
+		for k < gj{
+			gabung[k] = ganjil[k]
+			k++
+		}
 
-	urutBuku(&pustaka, nPustaka)
+		k = 0
+		for k < gn{
+			gabung[gj+k] = genap[k]
+			k++
+		}
+		total := gj + gn
 
-	cetak5Terbaru(pustaka, nPustaka)
-
-	fmt.Scan(&r)
-	cariBuku(pustaka, nPustaka, r)
+		//untuk mencetak
+		for k = 0; k < total; k++ {
+			if k < total-1 {
+				fmt.Printf("%d ", gabung[k])
+			} else {
+				fmt.Printf("%d\n", gabung[k])
+			}
+		}
+		d++
+	}	
 }

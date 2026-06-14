@@ -2,63 +2,51 @@ package main
 
 import "fmt"
 
-const nMax = 1000
+type arrRumah [1000000]int
 
-type arrInt [nMax]int
+func rumahkerabat(T *arrRumah, n int){
+	var a, i, j, idx_min int
 
-func insertionSort(T *arrInt, n int) {
-	var temp, i, j int
 	i = 1
-	for i <= n-1 {
-		j = i
-		temp = T[j]
-		for j > 0 && temp < T[j-1] {
-			T[j] = T[j-1]
-			j = j - 1
+	for i <= n -1{
+		idx_min = i -1
+		j = i 
+		for j < n{
+			if T[idx_min] > T[j]{
+				idx_min = j
+			}
+			j = j + 1
 		}
-		T[j] = temp
+		a = T[idx_min]
+		T[idx_min] = T[i-1]
+		T[i-1] = a
 		i = i + 1
 	}
 }
 
-func checkJarak(T *arrInt, n int) string {
-	var jarak, k int
-	var tetap bool
-	jarak = T[1] - T[0]
-	tetap = true
-	k = 2
-	for k < n && tetap {
-		if T[k]-T[k-1] != jarak {
-			tetap = false
+func main () {
+	var n, m int
+	var T arrRumah
+
+	fmt.Scan(&n)
+
+	d := 1
+	for d <= n{
+		fmt.Scan(&m)
+		k := 0
+		for k < m{
+			fmt.Scan(&T[k])
+			k = k + 1
 		}
-		k = k + 1
-	}
-	if tetap {
-		return fmt.Sprintf("Data berjarak %d", jarak)
-	}
-	return "Data berjarak tidak tetap"
-}
+		rumahkerabat(&T, m)
 
-func main() {
-	var arr arrInt
-	var n, x, k int
-
-	fmt.Scan(&x)
-	for x >= 0 {
-		arr[n] = x
-		n = n + 1
-		fmt.Scan(&x)
-	}
-
-	insertionSort(&arr, n)
-
-	for k < n {
-		if k > 0 {
-			fmt.Print(" ")
+		for k := 0; k < m; k++ {
+			if k < m-1 {
+				fmt.Printf("%d ", T[k])
+				} else {
+					fmt.Printf("%d\n", T[k])
+				}
+			}
+			d++
 		}
-		fmt.Print(arr[k])
-		k = k + 1
-	}
-	fmt.Println()
-	fmt.Println(checkJarak(&arr, n))
 }

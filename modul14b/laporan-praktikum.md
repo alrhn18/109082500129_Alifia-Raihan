@@ -268,7 +268,7 @@ Func median untuk mengurutkan nilai yang diinput dari yang terkecil ke terbesar 
 
 Func main untuk membaca angka yang diinput. Bilangan selain 0 dan -5313 akan disimpan ke array skor. Saat program membaca 0, func median akan dipanggil lalu akan menghitung median. Jika jumlah data ganjil, maka akan diampil elemen yang ditengah, jika jumlah data genap, maka diambil rata rata dua elemen tengah yang dibulatkan kebawah.
 
-Progran ini akan berhenti ketika program membaca -5313
+Program ini akan berhenti ketika program membaca -5313
 
 
 # <h1 align="center">Laporan Praktikum Modul 14 (Insertion Sort) </h1>
