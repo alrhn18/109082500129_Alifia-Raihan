@@ -271,6 +271,10 @@ Func main untuk membaca angka yang diinput. Bilangan selain 0 dan -5313 akan dis
 Program ini akan berhenti ketika program membaca -5313
 
 
+
+
+
+
 # <h1 align="center">Laporan Praktikum Modul 14 (Insertion Sort) </h1>
 
 ## Mengurutkan Angka dari Kecil ke Besar dan Mencari Jarak Antara Angka
